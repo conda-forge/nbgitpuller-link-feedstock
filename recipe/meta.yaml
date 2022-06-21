@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - nbgitpuller-link=nbgitpuller_link.cli:main
@@ -47,8 +47,6 @@ about:
     <https://jupyterhub.github.io/nbgitpuller> to provision files from a git
     repository on a JupyterHub. nbgitpuller-link has a handy, scriptable CLI
     and a Python API.
-  doc_url: https://bmi-topography.readthedocs.io
-  dev_url: https://github.com/csdms/bmi-topography
 
 extra:
   recipe-maintainers:
