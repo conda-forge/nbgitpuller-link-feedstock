@@ -1,5 +1,5 @@
 {% set name = "nbgitpuller-link" %}
-{% set version = "0.2" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 55c959e6e35b1b656f1ac848078aef45480af3b475576c4c67d5466f9af0caf5
+  sha256: ca5393857a86ceb27ca4ed16dd73875d978abfb44f714dfd43463d9e0b30f926
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - nbgitpuller-link=nbgitpuller_link.cli:main
 
